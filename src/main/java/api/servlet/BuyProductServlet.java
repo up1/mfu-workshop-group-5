@@ -46,7 +46,7 @@ public class BuyProductServlet extends HttpServlet {
 			String connectionPassword = "root";
 			conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
             stmt = conn.createStatement();
-			stmt.executeUpdate("INSERT INTO receipt VALUES ( "+receipt.getReceiptId()+", "+receipt.getMemberId()+", 21-1-2561, "+receipt.getTotal()+", "+receipt.getShopName()+")");
+			stmt.executeUpdate("INSERT INTO receipt VALUES ( "+receipt.getReceiptId()+", "+receipt.getMemberId()+", '21-1-2561', "+receipt.getTotal()+", "+receipt.getShopName()+")");
         }catch (Exception e) {
 			e.printStackTrace();
 		} 
