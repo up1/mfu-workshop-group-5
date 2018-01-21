@@ -8,7 +8,6 @@ public class Receipt {
     private Date date_time;
     private double total;
     private String shop_name;
-    private double fee;
 
     public double getReceiptId(){
         return receipt_id;
@@ -49,13 +48,4 @@ public class Receipt {
     public void setShopName(String shop_name){
         this.shop_name = shop_name;
     }
-
-    public double getFee(){
-        return fee;
-    }
-
-    public void setFee(double fee){
-        this.fee = fee;
-    }
-
 }
