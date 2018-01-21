@@ -46,7 +46,8 @@ public class BuyProductServlet extends HttpServlet {
 			String connectionPassword = "root";
 			conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
             stmt = conn.createStatement();
-			stmt.executeUpdate("INSERT INTO receipt (receipt_id, member_id, date_time, total, shop_name) VALUES ( "+receipt.getReceiptId()+", "+receipt.getMemberId()+", '2561-01-21', "+receipt.getTotal()+", '"+receipt.getShopName()+"');");
+            stmt.executeUpdate("INSERT INTO receipt (receipt_id, member_id, date_time, total, shop_name) VALUES ( "+receipt.getReceiptId()+", "+receipt.getMemberId()+", '2561-01-21', "+receipt.getTotal()+", '"+receipt.getShopName()+"');");
+            stmt.executeUpdate("INSERT INTO receipt (receipt_id, member_id, date_time, total, shop_name) VALUES ( "+receipt.getReceiptId()+1.00+", "+receipt.getMemberId()+", '2561-01-21', "+1.00+", '"+"MFU Wallet"+"');");
         }catch (Exception e) {
 			e.printStackTrace();
 		} 
