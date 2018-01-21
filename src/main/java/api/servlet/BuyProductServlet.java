@@ -32,7 +32,7 @@ public class BuyProductServlet extends HttpServlet {
         receipt.setReceiptId(1);
         receipt.setMemberId(1);
         receipt.setTotal(55);
-        receipt.setShopName("Coffe Prince");
+        receipt.setShopName("Coffee Print");
 
         Connection conn = null;
 		Statement stmt = null;

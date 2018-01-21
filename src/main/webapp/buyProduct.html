@@ -68,6 +68,19 @@
             font-size: 16px;
         }
     </style>
+    <script language="JavaScript">
+    function buyproduct() {
+        var ajax = new XMLHttpRequest();
+        ajax.onload = receiveResponse;
+        ajax.open("GET", "http://localhost:8080/api/buyProduct", true);
+        ajax.send();
+    }
+    function receiveResponse() {
+        console.log(this.responseText);
+    }
+       
+        
+    </script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -131,7 +144,7 @@
                 </table>
                 <br>
 
-                <button class="button">Comfirm</button>
+                <button class="button" onclick="buyproduct()">Confirm</button>
 
                 <div></div>
         </center>
